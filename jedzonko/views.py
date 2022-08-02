@@ -29,3 +29,4 @@ class CarouselView(View):
             recipe = random.choice(recipes)
             random_recipes.append(recipe)
         return render(request, 'carousel.html', {'recipes': random_recipes})
+

@@ -26,3 +26,4 @@ urlpatterns = [
     path('', views.CarouselView.as_view()),
     path('recipe/list/', views.RecipeListLinkView.as_view(), name='przepisy'),
 ]
+
