@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% block carousel %}
-    {{ for recipe in recipes }}
+    {% for recipe in recipes %}
                 <div class="carousel-item active">
                     <div class="container w-75 d-flex">
                         <div class="carousel-caption d-block">
