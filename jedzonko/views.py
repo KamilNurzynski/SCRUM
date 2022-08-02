@@ -1,7 +1,7 @@
 import random
 from datetime import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 
 
@@ -11,6 +11,10 @@ class IndexView(View):
         ctx = {"actual_date": datetime.now()}
         return render(request, "test.html", ctx)
 
+
+class RecipeListLinkView(View):
+    def get(self, request):
+        return redirect('/przepisy/')
 
 
 class CarouselView(View):
@@ -22,3 +26,4 @@ class CarouselView(View):
             recipe = random.choice(recipes)
             random_recipes.append(recipe)
         return render(request, 'carousel.html', {'recipes': random_recipes})
+
