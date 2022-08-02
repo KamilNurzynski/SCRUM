@@ -20,10 +20,8 @@ from jedzonko import views
 from jedzonko.views import IndexView
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
-    path('karuzela/', views.CarouselView.as_view(),
+    path('karuzela/', views.CarouselView.as_view()),
     path('recipe/list/', views.RecipeListLinkView.as_view(), name='przepisy'),
-
 ]
