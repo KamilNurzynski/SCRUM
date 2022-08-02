@@ -4,6 +4,8 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 from django.views import View
 
+from jedzonko.models import Recipe
+
 
 class IndexView(View):
 
@@ -11,7 +13,6 @@ class IndexView(View):
         ctx = {"actual_date": datetime.now()}
 
         return render(request, "index.html", ctx)
-
 
 
 class RecipeListLinkView(View):
@@ -28,4 +29,3 @@ class CarouselView(View):
             recipe = random.choice(recipes)
             random_recipes.append(recipe)
         return render(request, 'carousel.html', {'recipes': random_recipes})
-
