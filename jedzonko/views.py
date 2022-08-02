@@ -3,6 +3,7 @@ from datetime import datetime
 
 from django.shortcuts import render, redirect
 from django.views import View
+from jedzonko.models import Recipe
 
 from jedzonko.models import Recipe
 
@@ -18,7 +19,6 @@ class IndexView(View):
 class RecipeListLinkView(View):
     def get(self, request):
         return redirect('/przepisy/')
-
 
 class CarouselView(View):
 
