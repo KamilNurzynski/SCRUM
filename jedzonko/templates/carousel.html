@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block carousel %}
+    {{ for recipe in recipes }}
+                <div class="carousel-item active">
+                    <div class="container w-75 d-flex">
+                        <div class="carousel-caption d-block">
+                            <h1>{{ recipe.name }}</h1>
+                            <h3> {{ recipe.description }}</h3>
+                        </div>
+                    </div>
+                </div>
+    {% endfor %}
+{% endblock %}
